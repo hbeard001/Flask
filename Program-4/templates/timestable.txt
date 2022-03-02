@@ -1,0 +1,12 @@
+<html>
+<h2> <center> times table of <font color='Green'> <b> {{T}} </b>
+<br>
+<br>
+{% for a in range(1,10)%}
+
+    {{T}}*{{A}}={{A*T}} <br>
+
+{% end for%}
+<center>
+</h2>
+</html>

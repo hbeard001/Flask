@@ -1,0 +1,21 @@
+<html>
+
+{% for record in personal %}
+<h2> Employee Number :{{ record[0]}} <br> 
+<h2> Name of employee :<font color='green'> {{ record[1]}} </font color> <br>
+<h2> Department :{{ record[2]}} <br> 
+{% endfor %}
+
+{% for rec in accounts %}
+    {{rec[1]}},{{rec[2]}} <br>
+{% endfor %}
+
+<form action="http://localhost:5000/saverecord" method="post">
+Employee No<input type="text" name="empno"> <br>
+Salary Details:<input type="text" name="salary">
+
+</h2>
+
+<input type="submit">
+</form>
+</html>

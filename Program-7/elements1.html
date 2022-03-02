@@ -1,0 +1,26 @@
+<html>
+<script>
+ function doSomething(){
+     //alert(document.forms[0].elements.length)
+     //document.forms[0].elements[3].value="tree";
+     for(let i=0;i<document.forms[0].elements.length;i++){
+        let idd="err"+i
+        let EL=document.getElementById(idd);
+         if(document.forms[0].elements[i].value=="" && document.forms[0].elements[i].type=="text"){
+             EL.innerHTML="** Element Number "+ (i+1) +" is empty"
+             EL.style.visibility="visible"
+         }else{ 
+             EL.style.visibility="hidden"
+         }
+     }
+ }   
+ </script>
+    <input type="Button" onclick="doSomething()"> <br>
+  <form>
+
+    <input> <span id="err0" style="visibility:hidden;color:red">** can not be Empty </span><br>
+    <input> <span id="err1" style="visibility:hidden;color:red">** can not be Empty </span><br>
+    <input> <span id="err2" style="visibility:hidden;color:red">** can not be Empty </span><br>
+</form>
+
+</html>

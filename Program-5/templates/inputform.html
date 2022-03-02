@@ -1,0 +1,25 @@
+<html>
+    <script>
+        function checkdata(){
+            let answer=true
+            if(A.value==""){
+                num1Err.style.visibility="visible"
+                answer=false
+                }else{
+                    num1Err.style.visibility="Hidden"
+                }
+            if(B.value==""){
+                num2Err.style.visibility="visible"
+                answer=false
+                }else{
+                    num2Err.style.visibility="hidden"
+                }
+            return answer
+        } 
+    </script>
+<form action="http://localhost:5000/data" method ="POST" onsubmit="return checkdata()">
+Enter First Number:<input id="A" type="text" name="num1"><span id="num1Err" style="color:red;visibility:hidden"> number is missing</span><br>
+Enter Second Number:<input id="B" type="text" name="num2"><span id="num2Err" style="color:red;visibility:hidden"> number is missing</span><br>
+<input type="Submit" value="OK">
+</form>
+</html>

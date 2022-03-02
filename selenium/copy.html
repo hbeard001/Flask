@@ -1,0 +1,21 @@
+<html>
+<Script>
+    function copy(startNumber,endNumber){
+        newmsg.value=""
+        let message=msg.value
+        let i=0
+        while (i<message.length){
+            if(message.charCodeAt(i)>=startNumber && message.charCodeAt(i)<=endNumber){
+                newmsg.value+=message.substring(i,i+1)
+            }
+            i++
+        }
+    }
+</Script>
+Enter Message :<input type="text" id="msg" name="msg1"> <br>
+<input type="btn1" ID="A" value="Copy UpperCaseLetters" onclick="copy(65,90)">
+<input type="btn2" ID="B" value="Copy LowerCase letters" onclick="copy(97,122)">
+<input type="btn3" ID="C" value="Copy Digits" onclick="copy(48,57)">
+<br>
+New Message:<input type="text" id="newmsg" name="msg2"> <br>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<h2>
+    <center>
+        List of employees in {{dept}}
+    </center>
+</h2>
+    <table>
+        <tr>
+            <td> empno </td>
+            <td> Name </td>
+        </tr>
+    {% for record in data %}
+        <tr>
+            <td> {{record[0]}} </td>
+            <td> <a href='http://localhost:5000/payslip/{{record[0]}}'> {{record[1]}} <a> </td>
+        </td>
+    {% endfor %}
+    </table>
+</html>

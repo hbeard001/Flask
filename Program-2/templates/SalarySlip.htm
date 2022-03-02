@@ -1,0 +1,27 @@
+<html>
+
+<h2> <center> Salary Slip </center></h2>
+
+<Table>
+    <tr>
+        <td>Name:</td>
+        <td>{{name}}</td>
+    </tr>
+    <tr>
+        <td> salary:</td>
+        <td> {{salary}}</td>
+    </tr>
+    <tr>
+        <td>Tax Rate:</td>
+        <td>20%</td>
+    </tr>
+    <tr>
+        <td>Tax:</td>
+        <td>{{salary*20/100}}</td>
+    </tr>
+    <tr>
+        <td>Net Salary</td>
+        <td>{{salary-(salary*20/100)}}</td>
+    </tr>
+</Table>
+</html>
